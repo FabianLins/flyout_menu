@@ -1,0 +1,172 @@
+/*Style sheet of the Responsive jQuery Fixed Flyout Menu by Fabian Lins*/
+
+/*These are the variables. Keep in mind that variables can cause issues if you need to support older browers.*/
+/*For older browsers, you need to replace the variables using [CTRL+F].*/
+:root{
+
+/*Font*/
+
+/*The font is declared in the .text_flyout selector. If your font is declared in a parent div feel free to delete the attribute and variable.*/
+    --flyout_menu_font: sans-serif;
+
+/*Colors*/
+
+/*The property of the colors is declared as background, NOT as background-color!*/
+/*This means you can use hex codes (like in the example) but you can also make use of rgb(a) and gradients.*/
+
+    /*arrow_menu (left side) colors*/
+
+    --arrow_menu_left_side_color:#006f9e;
+    --triangle_color: white;
+
+    /*social_media_icon_flyout_parent (right side) colors*/
+
+    --main_menu_right_side_color:#83d0f5;
+        /*TIP! You can use the same colors as the --arrow_menu_left_side_color.*/
+    --flyout_menu_font_color: var(--arrow_menu_left_side_color);
+
+/*Sizes*/
+
+    /*social_media_icon_flyout_parent (right side) sizes*/
+
+    /*width of the images (social media icons)*/
+    --image_flyout_width:100px;
+    /*scaling of the images when the mobile mode is active*/
+        /*IMPORTANT! You need to set the use_flyout_menu_to_mobile_view variable in the flyout_menu_code.js to true to make use of this variable!*/
+        /*The value should be between 0 and 1. It scales the image.*/
+        /*You can also use a higher value but keep the limited screen sizes of mobiles in mind and the resolution of your image.*/
+    --image_flyout_scaling_mobile:0.75;
+    --flyout_menu_font_size: 16px;
+    /*padding between the icons and the border*/
+    --main_menu_right_side_padding:10px;
+    /*padding inbetween the icons*/
+    --social_media_icon_flyout_margin: 10px;
+    /*margin inbetween the icons*/
+        /*TIP! You can use the same padding as the --social_media_icon_flyout_margin.*/
+    --text_flyout_margin: var(--social_media_icon_flyout_margin);
+
+    /*arrow_menu (left side) sizes*/
+
+    --round_border_radius: 7px;
+    /*padding between the icons and the border*/
+         /*TIP! You can use the same padding as the --main_menu_right_side_padding.*/
+    --arrow_padding: var(--main_menu_right_side_padding);
+    --arrow_size: 20px;
+
+    --opacity-transition-duration: 0.1s;
+}
+
+#flyout_menu{
+    position: fixed;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999!important;
+    max-height: 100%;
+}
+
+.flyout_menu_right{
+    right:0;
+}
+
+.flyout_menu_left{
+    left:0;
+}
+
+.arrow_menu{
+    background: var(--arrow_menu_left_side_color);
+    padding:var(--arrow_padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow_menu_right{
+    border-top-left-radius: var(--round_border_radius);
+    border-bottom-left-radius: var(--round_border_radius);
+}
+
+.arrow_menu_left{
+    border-top-right-radius: var(--round_border_radius);
+    border-bottom-right-radius: var(--round_border_radius);
+}
+
+.social_media_icon_flyout{
+    padding: var(--social_media_icon_flyout_margin);
+    width:var(--image_flyout_width);
+    height: auto;
+    display: flex;
+    transition: opacity var(--opacity-transition-duration) ease-in-out;
+}
+
+.social_media_icon_flyout:hover, .social_media_icon_flyout:focus, .mouseover_opacity, .text_flyout a:hover, .text_flyout a:focus{
+    opacity: 0.7;
+}
+
+.social_media_icon_flyout_img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.text_flyout{
+    padding: var(--text_flyout_margin);
+    display: flex;
+    font-family: var(--flyout_menu_font);
+    font-size: var(--flyout_menu_font-size);
+    color: var(--flyout_menu_font_color);
+}
+
+.text_flyout a{
+    text-decoration: none;
+    color: var(--flyout_menu_font_color);
+    transition: opacity var(--opacity-transition-duration) ease-in-out;
+}
+
+.pointer{
+    cursor: pointer!important;
+}
+
+.arrow_menu_triangle{
+    border-top: var(--arrow_size) solid transparent;
+    border-bottom: var(--arrow_size) solid transparent;
+    transition: opacity var(--opacity-transition-duration) ease-in-out;
+}
+
+.triangle_left{
+    border-right: var(--arrow_size) solid var(--triangle_color)!important;
+}
+
+.triangle_right{
+    border-left: var(--arrow_size) solid var(--triangle_color)!important;
+}
+
+#social_media_icon_flyout_parent{
+    display: flex;
+    padding: var(--main_menu_right_side_padding);
+    background:var(--main_menu_right_side_color);
+    flex-direction:column;	
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#social_media_icon_flyout_parent_parent{
+    display: flex;
+    overflow: hidden;
+}
+
+.flyout_menu_row{
+    display:flex;
+}
+
+.social_media_icon_flyout_mobile_width{
+    width:calc(var(--image_flyout_scaling_mobile)*var(--image_flyout_width))!important;
+}
+
+.flyout_hide{
+    display:none;
+}
+
+.hide_flyout_menu_onload{
+    visibility: hidden;
+}
