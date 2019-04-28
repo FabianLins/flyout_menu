@@ -36,3 +36,6 @@ Thanks for your attention.
 
 # Bugs
 There are no known bugs. If you find one please write me an e-Mail.
+
+# Browser Compatibility
+The browser compatiblity is not tested carefully. However, after removing the variables the menu works in IE 11. Even with variables it works in the latest Firefox and Chrome version.
