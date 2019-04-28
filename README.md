@@ -33,3 +33,6 @@ If you have any questions feel free to write me an e-Mail:
 contact@fabianlins.com
 
 Thanks for your attention.
+
+#Bugs
+There are no known bugs. If you find one please write me an e-Mail.
