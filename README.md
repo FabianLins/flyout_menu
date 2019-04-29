@@ -47,4 +47,4 @@ Thanks for your attention.
 There are no known bugs. If you find one please write me an e-Mail.
 
 # Browser Compatibility
-The browser compatibility is not tested carefully. However, after removing the variables the menu works in IE 11. Even with variables it works in the latest Firefox and Chrome version.
+The browser compatibility is not tested carefully. However, after removing the variables the menu works in IE 11. Even with variables it works in the latest Firefox and Chrome versions.
