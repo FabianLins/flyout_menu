@@ -5,12 +5,12 @@ https://github.com/FabianLins/cookie_banner_js
 To use this Flyout Menu, you have to do a few things:
 
 # How does it work?
-I have used flex boxes for this menu. I did not want to use float or inline-block.
-The menu can be placed on the left or right by setting a variable in the JS file (right is the default).
-The right side of the menu is not expanded on start by getting the width of the right side in JS and setting it as margin.
-When you click on the menu you remove the margin and the menu expands.
-When you click on the expanded menu it is getting back to the default margin.
-You can also change the icon size on the mobile menu by changing variables in the CSS and JS file.
+- I have used flex boxes for this menu. I did not want to use float or inline-block.
+- The menu can be placed on the left or right by setting a variable in the JS file (right is the default and I suggest keeping it that way).
+- The right side of the menu is not expanded on start by getting the width of the right side in JS and setting it as margin.
+- When you click on the menu you remove the margin and the menu expands.
+- When you click on the expanded menu it is getting back to the default margin.
+- You can also change the icon size on the mobile menu by changing variables in the CSS and JS file.
 
 # Instructions
 1. Link the "flyout_menu_style.css" file.
