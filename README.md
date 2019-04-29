@@ -1,6 +1,6 @@
 # Responsive jQuery Flyout Menu by Fabian Lins
 This is the jQuery version of my Flyout Menu. There is also a Vanilla JavaScript version of this available:
-https://github.com/FabianLins/cookie_banner_js
+https://github.com/FabianLins/flyout_menu_js
 
 To use this Flyout Menu, you have to do a few things:
 
