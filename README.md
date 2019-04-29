@@ -1,7 +1,16 @@
 # Responsive jQuery Flyout Menu by Fabian Lins
-This is the jQuery version of my Flyout Menu. There is also a Vanilla JavaScript version of this available.
+This is the jQuery version of my Flyout Menu. There is also a Vanilla JavaScript version of this available:
+https://github.com/FabianLins/cookie_banner_js
 
 To use this Flyout Menu, you have to do a few things:
+
+# How does it work?
+I have used flex boxes for this menu. I did not want to use float or inline-block.
+The menu can be placed on the left or right by setting a variable in the JS file (right is the default).
+The right side of the menu is not expanded on start by getting the width of the right side in JS and setting it as margin.
+When you click on the menu you remove the margin and the menu expands.
+When you click on the expanded menu it is getting back to the default margin.
+You can also change the icon size on the mobile menu by changing variables in the CSS and JS file.
 
 # Instructions
 1. Link the "flyout_menu_style.css" file.
@@ -16,11 +25,11 @@ _______________________
   From here everything is optional but I suggest following this instruction.
   This will make sure you have support for older browsers.
 _______________________  
-8. Use [CTRL+F] to replace the variables within the CSS file.
+8. Use [CTRL+F] (sometimes [CTRL+H]) to replace the variables within the CSS file.
 9. Delete everything in ":root{}" (INCLUDING the ":root" name and brackets).
 
 # Additional Instruction
-You can also use the SCSS file to compile it to a CSS file which replaces steps number: 6,8,9.
+You can also use the SCSS file to compile it to a CSS file which replaces steps number: 6, 8, 9.
 However, compiling SCSS files can be a bit tricky depending on the setup. If you are new to it, feel free to check out this compiler:
 https://scout-app.io/
 
@@ -38,4 +47,4 @@ Thanks for your attention.
 There are no known bugs. If you find one please write me an e-Mail.
 
 # Browser Compatibility
-The browser compatiblity is not tested carefully. However, after removing the variables the menu works in IE 11. Even with variables it works in the latest Firefox and Chrome version.
+The browser compatibility is not tested carefully. However, after removing the variables the menu works in IE 11. Even with variables it works in the latest Firefox and Chrome version.
